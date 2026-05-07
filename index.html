@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andy Rimbaud | Soluciones de Inteligencia de Datos</title>
+    <title>Andy Rimbaud | Portafolio de Inteligencia de Datos</title>
     <style>
         :root {
             --oliva-dark: #3d4b21;
             --oliva: #556B2F;
             --salmon: #FA8072;
-            --fondo: #F4F7F0; /* Crema verdoso muy claro */
+            --fondo: #f2f2e9; /* Tono papel antiguo suave */
             --texto: #1a1c14;
             --blanco: #ffffff;
         }
 
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
+            /* Fuente clásica solicitada */
+            font-family: 'Times New Roman', Times, serif;
             background-color: var(--fondo);
             color: var(--texto);
             margin: 0;
@@ -32,78 +33,94 @@
 
         header h1 {
             margin: 0;
-            font-size: 3rem;
-            letter-spacing: -1px;
+            font-size: 3.5rem;
+            letter-spacing: 2px;
             text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        header p {
+            font-style: italic;
+            font-size: 1.3rem;
+            margin-top: 10px;
         }
 
         .container {
-            max-width: 1000px;
-            margin: -3rem auto 4rem; /* Eleva las tarjetas sobre el header */
+            max-width: 1100px;
+            margin: -4rem auto 4rem;
             padding: 0 1.5rem;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
 
         .card {
             background: var(--blanco);
-            border-radius: 16px;
+            border-radius: 4px; /* Bordes más rectos para look clásico */
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
             display: flex;
             flex-direction: column;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
+            border: 1px solid #ddd;
         }
 
         .card:hover {
             transform: translateY(-10px);
         }
 
-        /* Espacio para imagen o Icono */
-        .card-image {
-            background: var(--oliva-dark);
-            height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--salmon);
-            font-weight: bold;
-            font-size: 1.2rem;
-            text-align: center;
-            padding: 20px;
+        /* Contenedor de Imagen */
+        .card-image-container {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            border-bottom: 4px solid var(--salmon);
+        }
+
+        .card-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que la imagen llene el espacio sin estirarse */
+            display: block;
         }
 
         .card-content {
-            padding: 1.5rem;
+            padding: 2rem;
             flex-grow: 1;
         }
 
         .card-content h2 {
             color: var(--oliva);
             margin: 0 0 1rem 0;
-            font-size: 1.4rem;
+            font-size: 1.8rem;
+            border-bottom: 1px solid var(--salmon);
+            padding-bottom: 5px;
+        }
+
+        .card-content p {
+            font-size: 1.1rem;
+            text-align: justify;
         }
 
         .btn-group {
-            padding: 1.5rem;
+            padding: 1.5rem 2rem 2rem;
             display: flex;
-            gap: 10px;
-            background: #fafafa;
+            gap: 15px;
         }
 
         .btn {
             flex: 1;
             text-align: center;
-            padding: 0.7rem;
+            padding: 0.8rem;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: 0.2s;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .btn-primary {
@@ -112,25 +129,29 @@
         }
 
         .btn-primary:hover {
-            background-color: #e67366;
-            box-shadow: 0 4px 12px rgba(250, 128, 114, 0.4);
+            background-color: var(--oliva);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .btn-secondary {
-            border: 1.5px solid var(--oliva);
+            border: 1px solid var(--oliva);
             color: var(--oliva);
         }
 
         .btn-secondary:hover {
-            background: var(--oliva);
-            color: white;
+            background: #eee;
         }
 
         footer {
             text-align: center;
-            padding: 4rem;
-            color: var(--oliva);
-            font-size: 0.9rem;
+            padding: 5rem;
+            background-color: var(--oliva-dark);
+            color: var(--blanco);
+        }
+
+        footer p {
+            font-style: italic;
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -138,48 +159,53 @@
 
     <header>
         <h1>Freddy Anderson Romero</h1>
-        <p style="font-size: 1.2rem; opacity: 0.9;">Data Specialist | BI & IoT Architect</p>
+        <p>Expertise in Data Analytics, IoT Systems & Strategic Dashboards</p>
     </header>
 
     <div class="container">
         <div class="grid">
             
-            <!-- Lead Validation -->
+            <!-- Lead Validation System -->
             <div class="card">
-                <div class="card-image">BI & Lead Scoring</div>
+                <div class="card-image-container">
+                    <img src="leads.png" alt="Lead Validation System Preview">
+                </div>
                 <div class="card-content">
-                    <h2>Lead Validation System</h2>
-                    <p>Clasificación inteligente "Semáforo" para prospección comercial basada en datos, eliminando sesgos humanos.</p>
+                    <h2>Lead Validation</h2>
+                    <p>Sistema "Semáforo" diseñado para la clasificación algorítmica de leads. Optimiza la prospección comercial basándose en datos objetivos, eliminando el sesgo humano en el embudo de ventas.</p>
                 </div>
                 <div class="btn-group">
-                    <a href="https://lead-validation-dashboard-aarrbjvdsv5wzwtqchsoem.streamlit.app/" class="btn btn-primary" target="_blank">Demo Streamlit</a>
+                    <a href="https://lead-validation-dashboard-aarrbjvdsv5wzwtqchsoem.streamlit.app/" class="btn btn-primary" target="_blank">Ver Demo</a>
                     <a href="https://github.com/AndyRimbaud/Lead-Validation-Dashboard" class="btn btn-secondary" target="_blank">Código</a>
                 </div>
             </div>
 
-            <!-- BI Inventory -->
+            <!-- Inventory Dashboard -->
             <div class="card">
-                <div class="card-image">IoT & Digital Product</div>
+                <div class="card-image-container">
+                    <img src="inventory.png" alt="Inventory Dashboard Preview">
+                </div>
                 <div class="card-content">
-                    <h2>Inventory Dashboard</h2>
-                    <p>Gestión de stock en tiempo real mediante cámaras de profundidad y sensores IoT. Precisión total en compras/ventas.</p>
+                    <h2>Smart Inventory</h2>
+                    <p>Gestión de inventario inteligente mediante integración de sensores IoT y cámaras de profundidad. Visualización en tiempo real de métricas críticas para la toma de decisiones en logística.</p>
                 </div>
                 <div class="btn-group">
-                    <a href="https://inventory-ai-dashboard-xrf8fesxazrs4unt3oetgf.streamlit.app/" class="btn btn-primary" target="_blank">Demo Streamlit</a>
+                    <a href="https://inventory-ai-dashboard-xrf8fesxazrs4unt3oetgf.streamlit.app/" class="btn btn-primary" target="_blank">Ver Demo</a>
                     <a href="https://github.com/AndyRimbaud/BI-Inventory-Dashboard" class="btn btn-secondary" target="_blank">Código</a>
                 </div>
             </div>
 
             <!-- Casa do Vitorino -->
             <div class="card">
-                <div class="card-image">Hospitality Analytics</div>
+                <div class="card-image-container">
+                    <img src="alto-duoro.jpg" alt="Casa do Vitorino Preview">
+                </div>
                 <div class="card-content">
                     <h2>Casa do Vitorino</h2>
-                    <p>Dashboard estratégico para hostelería de lujo. Control de flujo de caja y cumplimiento ambiental modular.</p>
+                    <p>Dashboard estratégico para hostelería de lujo. Control exhaustivo de flujo de caja, KPIs de servicio y monitoreo de permisos ambientales bajo un modelo modular escalable.</p>
                 </div>
                 <div class="btn-group">
-                    <!-- RUTA CORREGIDA CON %20 PARA EL ESPACIO -->
-                    <a href="https://andyrimbaud.github.io/Casa_do_Vitorino/Casa%20Do%20Vitorino/" class="btn btn-primary" target="_blank">Ver Dashboard</a>
+                    <a href="https://andyrimbaud.github.io/Casa_do_Vitorino/Casa%20Do%20Vitorino/" class="btn btn-primary" target="_blank">Ver Demo</a>
                     <a href="https://github.com/AndyRimbaud/Casa_do_Vitorino" class="btn btn-secondary" target="_blank">Código</a>
                 </div>
             </div>
@@ -188,7 +214,8 @@
     </div>
 
     <footer>
-        <p>Proyectos desarrollados por Andy Rimbaud &copy; 2026</p>
+        <p>"In God we trust, all others must bring data."</p>
+        <p>Andy Rimbaud &copy; 2026 | Desarrollado con precisión técnica.</p>
     </footer>
 
 </body>
