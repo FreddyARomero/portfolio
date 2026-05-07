@@ -2,10 +2,35 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Portafolio</title>
+    <title>Freddy Anderson Romero - Portafolio Profesional</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 20px; }
+        .proyecto { border: 1px solid #ccc; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .btn { display: inline-block; padding: 10px; background: #24292e; color: white; text-decoration: none; border-radius: 5px; margin-right: 10px; }
+        .btn-code { background: #e1e4e8; color: #24292e; }
+    </style>
 </head>
 <body>
-    <h1>¡Hola! Este es mi portafolio</h1>
-    <p>Próximamente verás mis proyectos aquí.</p>
+    <h1>Bienvenido a mi Portafolio</h1>
+    
+    <!-- Repite este bloque por cada proyecto -->
+    <div class="proyecto">
+        <h2>Proyecto 1: Dashboard Inventory</h2>
+        <p>Una aplicación web para gestionar finanzas personales usando JS y LocalStorage.</p>
+        
+        <!-- Enlace a la Demo que activaste en el PASO 1 -->
+        <a class="btn" href="https://tu-usuario.github.io/proyecto-calculadora/" target="_blank">Ver Demo en Vivo</a>
+        
+        <!-- Enlace al código fuente normal -->
+        <a class="btn btn-code" href="https://github.com/tu-usuario/proyecto-calculadora" target="_blank">Ver Código en GitHub</a>
+    </div>
+
+    <div class="proyecto">
+        <h2>Proyecto 2: App de Clima</h2>
+        <p>Consulta el clima en tiempo real consumiendo una API externa.</p>
+        <a class="btn" href="https://tu-usuario.github.io/proyecto-clima/" target="_blank">Ver Demo en Vivo</a>
+        <a class="btn btn-code" href="https://github.com/tu-usuario/proyecto-clima" target="_blank">Ver Código en GitHub</a>
+    </div>
+
 </body>
 </html>
